@@ -40,4 +40,4 @@ This project was developed using **vanilla JavaScript (ES6)** without any extern
 
 ---
 
-🚀 **This README is now ready for your personal project!** 🚀
+
