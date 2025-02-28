@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <div id="notificationBar" class="notification"></div>
+
+    <div class="form-container">
+        <h1>Registration</h1>
+        <form id="registrationForm" novalidate>
+            <div class="form-group">
+                <label>Email:</label>
+                <input type="email" id="regEmail" required>
+                <small class="error-message" id="emailError"></small>
+            </div>
+            <div class="form-group">
+                <label>Username:</label>
+                <input type="text" id="regUsername" required>
+                <small class="error-message" id="usernameError"></small>
+            </div>
+            <div class="form-group">
+                <label>Password:</label>
+                <input type="password" id="regPassword" required>
+                <small class="error-message" id="passwordError"></small>
+            </div>
+            <div class="form-group">
+                <label>Confirm Password:</label>
+                <input type="password" id="regConfirmPassword" required>
+                <small class="error-message" id="confirmPasswordError"></small>
+            </div>
+            <button type="submit">Register</button>
+        </form>
+        <div id="registrationFeedback"></div>
+        <button class="animated-button" onclick="location.href='login.html'"><span>Already Have An Account?</span></button>
+    </div>
+
+    <script src="script/registration.js"></script>
+</body>
+</html>

@@ -1,0 +1,169 @@
+/* Light Background */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* Light gray background */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/* Notification Bar */
+.notification {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 18px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    z-index: 1000;
+}
+
+.notification.show {
+    opacity: 1;
+}
+
+/* Form Container */
+.form-container {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 320px;
+    text-align: center;
+}
+
+/* Form Fields */
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    text-align: left;
+}
+
+input[type="text"], 
+input[type="email"], 
+input[type="password"] {
+    width: 90%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Buttons */
+button {
+    background-color: #1a1de6;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #7328ff;
+}
+
+/* Error Message Styling */
+.error-message {
+    color: red;
+    font-size: 0.85rem;
+}
+
+/* Success Message */
+.success-message {
+    color: green;
+    font-weight: bold;
+    margin-top: 10px;
+}
+/* Animated Button */
+.animated-button {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 5px;
+    background: #669bbc;
+    box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+button, .animated-button {
+    width: 90%; /* Adjusted to align with input fields */
+    padding: 12px 15px; /* Reduced padding for smaller size */
+    font-size: 14px; /* Reduced font size */
+    margin-top: 8px; /* Slightly reduced space */
+  
+}
+
+.animated-button:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    width: 0%;
+    height: 100%;
+    background: #383f51;
+    transition: all 0.4s ease-in-out;
+}
+
+.animated-button:hover::after {
+    left: 0;
+    width: 100%;
+}
+
+.animated-button span {
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+    padding: 12px 15px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    z-index: 1;
+    transition: all 0.3s ease-in-out;
+}
+
+.animated-button:hover span {
+    color: #ffd700;
+    animation: scaleUp 0.3s ease-in-out;
+}
+
+.animated-button:not(:hover) span {
+    animation: scaleDown 0.3s ease-in-out;
+}
+
+@keyframes scaleUp {
+    0% { transform: scale(1); }
+    50% { transform: scale(0.95); }
+    100% { transform: scale(1); }
+} 
+
+@keyframes scaleDown {
+    0% { transform: scale(1); }
+    50% { transform: scale(0.95); }
+    100% { transform: scale(1); }
+}
+/* Center form buttons */
+.form-container button, 
+.form-container .animated-button {
+    margin-left: auto;
+    margin-right: auto;
+}

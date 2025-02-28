@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Login</title>
+  <link rel="stylesheet" href="styles/style.css" />
+</head>
+<body>
+    <div id="notificationBar" class="notification"></div>
+
+    <div class="form-container">
+        <h1>Login</h1>
+
+        <form id="loginForm" novalidate>
+            <div class="form-group">
+                <label for="loginUsername">Username:</label>
+                <input type="text" id="loginUsername" name="loginUsername" required />
+                <small class="error-message" id="loginUserError"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="loginPassword">Password:</label>
+                <input type="password" id="loginPassword" name="loginPassword" required />
+                <small class="error-message" id="loginPassError"></small>
+            </div>
+
+            <button type="submit">Login</button>
+        </form>
+
+        <div id="loginFeedback"></div>
+
+        <button class="animated-button" onclick="location.href='index.html'">
+            <span>Create an Account</span>
+        </button>
+        
+    </div>
+
+    <script src="script/data.js"></script>
+    <script src="script/login.js"></script>
+</body>
+</html>
